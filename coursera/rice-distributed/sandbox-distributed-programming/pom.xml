@@ -2,11 +2,11 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>nu.helmers.courses.concurrent</groupId>
-    <artifactId>sandbox-concurrent-programming</artifactId>
+    <groupId>nu.helmers.courses.distributed</groupId>
+    <artifactId>sandbox-distributed-programming</artifactId>
     <packaging>jar</packaging>
     <version>0.0</version>
-    <name>sandbox-concurrent-programming</name>
+    <name>sandbox-distributed-programming</name>
 
     <properties>
         <pcdp.version>0.0.4-SNAPSHOT</pcdp.version>
@@ -43,17 +43,15 @@
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-all</artifactId>
+            <artifactId>hamcrest-core</artifactId>
             <version>1.3</version>
             <scope>test</scope>
         </dependency>
-
-        <!--<dependency>-->
-            <!--<groupId>org.hamcrest</groupId>-->
-            <!--<artifactId>hamcrest-core</artifactId>-->
-            <!--<version>1.3</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+            <version>1.6.1</version>
+        </dependency>
     </dependencies>
 
     <build>

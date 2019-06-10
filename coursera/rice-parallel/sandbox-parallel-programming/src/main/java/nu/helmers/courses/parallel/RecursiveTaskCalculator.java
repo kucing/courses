@@ -39,9 +39,9 @@ public class RecursiveTaskCalculator extends RecursiveTask<Long> {
         RecursiveTaskCalculator task1 = new RecursiveTaskCalculator(array, fromIx, fromIx + length/2);
         RecursiveTaskCalculator task2 = new RecursiveTaskCalculator(array, fromIx + length/2, toIx);
 
-        task1.fork(); // Execute in parallel
+        task1.fork();                   // Execute in parallel (start future)
         Long result2 = task2.compute(); // Execute synchronously
-        Long result1 = task1.join(); // Wait until completed
+        Long result1 = task1.join();    // Wait until completed (future.get())
 
         return result1 + result2;
     }
